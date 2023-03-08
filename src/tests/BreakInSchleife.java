@@ -25,4 +25,13 @@ public class BreakInSchleife {
             System.out.println(i);
         }
     }
+
+    public static void ReturnInSchleife(){
+        for(int i = 0; i < 10; i++){
+            if(i == 3){
+                return;
+            }
+            System.out.println(i);
+        }
+    }
 }
