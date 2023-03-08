@@ -27,4 +27,7 @@ public class Aufgabe_1 {
     j) float    4.5         double 4.5
     k) int      1           int 1
      */
+
+
+
 }
