@@ -6,10 +6,7 @@ public class Aufgabe_3 {
 
     public static boolean isDivisibleByTwo(int number){
 
-        if(number % 2 == 0) {
-            return true;
-        }
-        return false;
+       return number % 2 == 0;
     }
 
 }
