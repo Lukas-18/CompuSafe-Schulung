@@ -15,16 +15,16 @@ public class Aufgabe_1 {
 // k) int i = 2; i--;
 
     /*
-    a) byte     5
-    b) float    5.0
-    c) long     4L
-    d) byte     12
-    e) float    8.0
-    f) float    8.0f
-    g) float    4.0f
-    h) long     18L
-    i) float    3.5
-    j) float    4.5
-    k) int      1
+    a) byte     5           int 5
+    b) float    5.0         double 5.0
+    c) long     4L          long 4
+    d) byte     12          int 12
+    e) float    8.0         double 8.0
+    f) float    8.0f        float 8.0
+    g) float    4.0f        double 4.0
+    h) long     18L         long 18
+    i) float    3.5         int 3
+    j) float    4.5         double 4.5
+    k) int      1           int 1
      */
 }
