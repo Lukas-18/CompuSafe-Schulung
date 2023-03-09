@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Kassenbon {
 
+    static Scanner scan = new Scanner(System.in);
     static Ware wurst = new Ware("Wurst", 4.20);
     static Ware kaese = new Ware("Käse", 2.30);
     static Ware brot = new Ware("Brot", 2.10);
@@ -23,7 +24,6 @@ public class Kassenbon {
     }
 
     public static void output(){
-        Scanner scan = new Scanner(System.in);
         System.out.println("1) Buy  2) Pay  3) Cancel");
         switch(scan.nextInt()){
             case 1:
@@ -49,7 +49,6 @@ public class Kassenbon {
     }
 
     public static void chooseProducts(){
-        Scanner scan = new Scanner(System.in);
         System.out.println(
                 " 1) " + warenGruppe[0].name + "\n" +
                 " 2) " + warenGruppe[1].name + "\n" +
@@ -80,6 +79,21 @@ public class Kassenbon {
             toPay += gewaehlteWaren.get(i).price;
         }
         System.out.println("You have to pay: " + toPay);
+        double givenMoney = giveMoney();
+        if(givenMoney < toPay){
+            System.out.println("Give enough money!");
+            giveMoney();
+        } else {
+            double aufZweiNachkommaStellen = (givenMoney - toPay) * 100;
+            aufZweiNachkommaStellen = Math.round(aufZweiNachkommaStellen);
+            aufZweiNachkommaStellen = aufZweiNachkommaStellen / 100;
+            System.out.println("You get back: " + aufZweiNachkommaStellen);
+        }
+    }
+
+    public static double giveMoney(){
+        System.out.println("You give money: ");
+        return scan.nextDouble();
     }
 
     public static void sayBye(){
