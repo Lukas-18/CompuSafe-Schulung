@@ -4,34 +4,42 @@ import java.util.Scanner;
 
 public class CalculatorBMI {
 
+
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Größe in Zentimeter: ");
-        int height = scan.nextInt();
+        double height = scan.nextDouble();
         System.out.println("Gewicht in Kilogram: ");
-        int weight = scan.nextInt();
+        double weight = scan.nextDouble();
 
-        textOutput(calculateBmi(height, weight));
+        double calculatedBMI = calculateBmi(height, weight);
+
+        System.out.println("Ihr BMI ist " + calculatedBMI + " und Sie sind damit " + textOutput(calculatedBMI) + ".");
     }
 
-    public static double calculateBmi(int heightInCentimeters, int weightInKilograms){
+    /**
+     * Calculates BMI
+     * @param heightInCentimeters
+     * @param weightInKilograms
+     * @return BMI as a double
+     */
+    public static double calculateBmi(double heightInCentimeters, double weightInKilograms){
+        //double meter = heightInCentimeters / 100;
         return weightInKilograms / (heightInCentimeters * heightInCentimeters / 10_000);
     }
 
-    public static void textOutput(double bmi){
-        String category = "";
+    public static BMICategory textOutput(double bmi){
 
         if(bmi < 18.5){
-            category = "untergewichtig";
+            return BMICategory.UNTERGEWICHTIG;
         } else if(/* bmi >= 18.5 && */ bmi < 25){
-            category = "normalgewichtig";
+            return BMICategory.NORMALGEWICHTIG;
         } else if(/* bmi >= 25 && */ bmi <= 30){
-            category = "übergewichtig";
-        }  else if(bmi > 30){
-            category = "schwer übergewichtig";
+            return BMICategory.ÜBERGEWICHTIG;
+        }  else{
+            return BMICategory.SCHWER_ÜBERGEWICHTIG;
         }
 
-        System.out.println("Ihr BMI ist " + bmi + " und Sie sind damit " + category + ".");
     }
 }

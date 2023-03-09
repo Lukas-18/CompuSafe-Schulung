@@ -1,0 +1,5 @@
+package aufgabe_4_BMI;
+
+public enum BMICategory {
+    UNTERGEWICHTIG, NORMALGEWICHTIG, ÜBERGEWICHTIG, SCHWER_ÜBERGEWICHTIG
+}

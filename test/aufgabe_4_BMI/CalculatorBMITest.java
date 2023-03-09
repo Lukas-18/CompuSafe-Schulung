@@ -8,35 +8,34 @@ class CalculatorBMITest {
 
     @Test
     public void underweight(){
-        int height = 200;
-        int weight = 60;
+        BMICategory actual = CalculatorBMI.textOutput(18);
+        BMICategory expected = BMICategory.UNTERGEWICHTIG;
 
-        // assertEquals(CalculatorBMI.calculateBmi(height, weight), 18.5);
-        assertTrue(CalculatorBMI.calculateBmi(height, weight) < 18.5);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void normalweight(){
-        int height = 180;
-        int weight = 70;
+        BMICategory actual = CalculatorBMI.textOutput(20);
+        BMICategory expected = BMICategory.NORMALGEWICHTIG;
 
-        assertTrue(CalculatorBMI.calculateBmi(height, weight) >= 18.5 && CalculatorBMI.calculateBmi(height, weight) < 25);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void overweight(){
-        int height = 170;
-        int weight = 50;
+        BMICategory actual = CalculatorBMI.textOutput(27);
+        BMICategory expected = BMICategory.ÜBERGEWICHTIG;
 
-        assertTrue(CalculatorBMI.calculateBmi(height, weight) >= 25 && CalculatorBMI.calculateBmi(height, weight) <= 30);
+        assertEquals(expected, actual);
     }
 
     @Test
     public void  severely_overweight(){
-        int height = 160;
-        int weight = 80;
+        BMICategory actual = CalculatorBMI.textOutput(32);
+        BMICategory expected = BMICategory.SCHWER_ÜBERGEWICHTIG;
 
-        assertTrue(CalculatorBMI.calculateBmi(height, weight) > 30);
+        assertEquals(expected, actual);
     }
 
 }
