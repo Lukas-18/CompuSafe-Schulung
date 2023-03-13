@@ -27,25 +27,37 @@ public class Punkt_2D {
         this.y = y;
     }
 
-    //verschiebe, move:
+    /**
+     * verschiebe aktuellen Punkt im Koordinaten-System,
+     * move:
+     */
     public void add(Punkt_2D punkt){
         this.x += punkt.x;
         this.y += punkt.y;
     }
 
-    //verschiebe nach links/unten, move:
+    /**
+     * verschiebe aktuellen Punkt im Koordinaten-System nach links/unten,
+     * move:
+     */
     public void subtract(Punkt_2D punkt){
         this.x -= punkt.x;
         this.y -= punkt.y;
     }
 
-    //skaliere, scale:
+    /**
+     * skaliere aktuellen Punkt,
+     * scale:
+     */
     public void multiply(double multiplikator){
         this.x *= multiplikator;
         this.y *= multiplikator;
     }
 
-    //skaliere kleiner, scale:
+    /**
+     * skaliere aktuellen Punkt kleiner,
+     * scale:
+     */
     public void divide(double multiplikator){
         this.x /= multiplikator;
         this.y /= multiplikator;
