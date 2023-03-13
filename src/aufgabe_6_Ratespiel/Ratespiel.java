@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class Ratespiel {
 
-    static int randomNumber = new Random().nextInt(100);
+    //static int randomNumber = new Random().nextInt(100);
     public static void main(String [] args){
-        readNumber();
+        readNumber(new Random().nextInt(100));
     }
 
-    static void readNumber(){
+    static void readNumber(int randomNumber){
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Number: ");
@@ -24,7 +24,7 @@ public class Ratespiel {
             } else {
                 System.out.println("Kleiner!");
             }
-            readNumber();
+            readNumber(randomNumber);
         }
     }
 
