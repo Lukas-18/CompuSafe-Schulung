@@ -2,9 +2,9 @@ package aufgabe_9_2D_Punkt;
 
 public class Punkt_2D {
 
-    private int x, y;
+    private double x, y;
 
-    public Punkt_2D(int x, int y){
+    public Punkt_2D(double x, double y){
         this.x = x;
         this.y = y;
     }
@@ -13,17 +13,17 @@ public class Punkt_2D {
     }
 
     // getter & setter:
-    public int getX(){
+    public double getX(){
         return this.x;
     }
-    public void setX(int x){
+    public void setX(double x){
         this.x = x;
     }
 
-    public int getY(){
+    public double getY(){
         return this.y;
     }
-    public void setY(int y){
+    public void setY(double y){
         this.y = y;
     }
 
@@ -40,13 +40,13 @@ public class Punkt_2D {
     }
 
     //skaliere, scale:
-    public void multiply(int multiplikator){
+    public void multiply(double multiplikator){
         this.x *= multiplikator;
         this.y *= multiplikator;
     }
 
     //skaliere kleiner, scale:
-    public void divide(int multiplikator){
+    public void divide(double multiplikator){
         this.x *= multiplikator;
         this.y *= multiplikator;
     }
