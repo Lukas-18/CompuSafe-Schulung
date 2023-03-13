@@ -35,8 +35,8 @@ public class Punkt_2D {
 
     //verschiebe nach links/unten, move:
     public void subtract(Punkt_2D punkt){
-        this.x += punkt.x;
-        this.y += punkt.y;
+        this.x -= punkt.x;
+        this.y -= punkt.y;
     }
 
     //skaliere, scale:
@@ -47,8 +47,8 @@ public class Punkt_2D {
 
     //skaliere kleiner, scale:
     public void divide(double multiplikator){
-        this.x *= multiplikator;
-        this.y *= multiplikator;
+        this.x /= multiplikator;
+        this.y /= multiplikator;
     }
 
     public String toString(){
