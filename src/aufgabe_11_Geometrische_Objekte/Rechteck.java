@@ -2,7 +2,7 @@ package aufgabe_11_Geometrische_Objekte;
 
 import aufgabe_9_2D_Punkt.Punkt_2D;
 
-public class Rechteck implements GeometrischesObjekt{
+public class Rechteck extends GeometrischesObjekt{
 
     private Punkt_2D a;
     private Punkt_2D b;

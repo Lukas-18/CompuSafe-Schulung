@@ -2,7 +2,7 @@ package aufgabe_11_Geometrische_Objekte;
 
 import aufgabe_9_2D_Punkt.Punkt_2D;
 
-public class Kreis implements GeometrischesObjekt{
+public class Kreis extends GeometrischesObjekt{
 
     private Punkt_2D m = new Punkt_2D();
     private double r;
