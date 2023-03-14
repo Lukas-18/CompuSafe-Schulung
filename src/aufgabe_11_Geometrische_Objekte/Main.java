@@ -17,7 +17,8 @@ public class Main {
 
         Dreieck d1 = new Dreieck(new Punkt_2D(1, 1), new Punkt_2D(27, 1), new Punkt_2D(4, 32));
         d1.berechneFlaeche();
-        Dreieck d2 = new Dreieck(new Punkt_2D(1, 1), new Punkt_2D(4, 1), new Punkt_2D(4, 32));
-        d2.berechneUmfang();
+        /*Dreieck d2 = new Dreieck(new Punkt_2D(1, 1), new Punkt_2D(4, 1), new Punkt_2D(4, 32));
+        d2.berechneUmfang();*/
+
     }
 }
