@@ -13,24 +13,25 @@ class ArrayWrapperTest {
         aw.add(3);
         aw.add(4);
         aw.add(5);
-        assertEquals(aw.get(3), 5);
+        assertEquals(5, aw.get(3));
+        assertEquals(aw.get(0), 2);
     }
 
     @Test
     void get() {
         aw.add(2);
-        assertEquals(aw.get(0), 2);
+        assertEquals(2, aw.get(0));
     }
 
     @Test
     void getArraySize() {
-        assertEquals(aw.getArraySize(), 3);
+        assertEquals(3, aw.getArraySize());
     }
 
     @Test
     void getElementCount() {
-        assertEquals(aw.getElementCount(), 0);
+        assertEquals(0, aw.getElementCount());
         aw.add(2);
-        assertEquals(aw.getElementCount(), 1);
+        assertEquals(1, aw.getElementCount());
     }
 }
