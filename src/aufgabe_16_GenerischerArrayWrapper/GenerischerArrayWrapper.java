@@ -17,10 +17,11 @@ public class GenerischerArrayWrapper <P> {
 
     public void add(P newElement){
         // Array is full:
-        if(arr[arr.length-1].equals(0)){
+        if(elementCount>=arr.length){
             P[] result = (P[]) new Object[arr.length * 2];
             System.arraycopy(arr, 0, result, 0, arr.length);
             arr = result;
+
         }
         arr[elementCount] = newElement;
         elementCount++;
