@@ -2,6 +2,11 @@ package aufgabe_19_Comparator;
 
 import aufgabe_13_equals.Person;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     static Person person1 = new Person(20, "Max", "Musterman", 180, 80);
@@ -11,6 +16,7 @@ public class Main {
     static GroesseComparator gc = new GroesseComparator();
 
     public static void main(String[] args){
+        /*
         Integer alterPerson1 = person1.getAlter();
         Integer alterPerson2 = person2.getAlter();
 
@@ -24,6 +30,26 @@ public class Main {
         System.out.println(person1.getVorname() + " ist " + groessePerson1 + "cm groß.");
         System.out.println(person1.getVorname() + " ist " + groessePerson2 + "cm groß.");
         System.out.println(gc.compare(groessePerson1, groessePerson2));
+        */
+        System.out.println(Main.class.getDeclaredFields());
+        Field[] personFields = Person.class.getDeclaredFields();
+        Method[] personMethods = Person.class.getDeclaredMethods();
+
+        for(Field f : personFields){
+            System.out.println(f.getName());
+        }
+
+        System.out.println();
+
+        //List<Method> alleVoidMethoden = new ArrayList<>();
+
+        for(Method m : personMethods){
+            if(m.getReturnType().toString().equals("void")) {
+                //alleVoidMethoden.add(m);
+                System.out.println(m);
+            }
+        }
+        //System.out.println(alleVoidMethoden.toString());
 
     }
 }
