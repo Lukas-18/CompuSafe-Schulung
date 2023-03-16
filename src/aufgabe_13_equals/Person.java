@@ -2,7 +2,7 @@ package aufgabe_13_equals;
 
 import java.util.Objects;
 
-public class Person {
+public class Person implements Comparable<Person>{
     private int alter;
     private String vorname;
     private String nachname;
@@ -77,5 +77,10 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(alter, vorname, nachname, groesseInCm, gewichtInKg);
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.getVorname().compareTo(o.getVorname());
     }
 }
