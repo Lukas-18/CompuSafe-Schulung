@@ -1,5 +1,6 @@
 package aufgabe_22_Streams;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ class MainTest {
     private Tier vogel;
     private Tier gepard;
 
+    @BeforeEach // dadurch muss nicht in jeder Methode init() aufgerufen werden.
     private void init(){
         tiere      = new ArrayList<>();
         elefant    = new Tier("Elefant", 11, 730, 4);
@@ -32,68 +34,44 @@ class MainTest {
 
     @Test
     void getTiereMitZweiBeinen() {
-        init();
         List<Tier> actual   = Main.getTiereMitZweiBeinen(tiere);
         List<Tier> expected = new ArrayList<>();
-        for(Tier t : tiere){
-            if(t.getAnzahlBeine() == 2){
-                expected.add(t);
-            }
-        }
+        expected.add(vogel);
         assertEquals(expected, actual);
     }
 
     @Test
     void getTiereUeber10() {
-        init();
         List<Tier> actual = Main.getTiereUeber10(tiere);
         List<Tier> expected = new ArrayList<>();
-        for(Tier t : tiere){
-            if(t.getAlter() > 10){
-                expected.add(t);
-            }
-        }
+        expected.add(elefant);
         assertEquals(expected, actual);
     }
 
     @Test
     void streamGetTiereMitZweiBeinen() {
-        init();
         List<Tier> actual = Main.streamGetTiereMitZweiBeinen(tiere);
         List<Tier> expected = new ArrayList<>();
-        for(Tier t : tiere){
-            if(t.getAnzahlBeine() == 2){
-                expected.add(t);
-            }
-        }
+        expected.add(vogel);
         assertEquals(expected, actual);
     }
 
     @Test
     void streamGetTiereUeber10() {
-        init();
         List<Tier> actual = Main.streamGetTiereUeber10(tiere);
         List<Tier> expected = new ArrayList<>();
-        for(Tier t : tiere){
-            if(t.getAlter() > 10){
-                expected.add(t);
-            }
-        }
+        expected.add(elefant);
         assertEquals(expected, actual);
     }
 
     @Test
     void streamGetSchwereUndJungeTiere() {
-        init();
         double gewicht = 60.0;
         int alter = 7;
         List<Tier> actual = Main.streamGetSchwereUndJungeTiere(tiere, gewicht, alter);
         List<Tier> expected = new ArrayList<>();
-        for(Tier t : tiere){
-            if(t.getGewicht() > gewicht && t.getAlter() < alter){
-                expected.add(t);
-            }
-        }
+        expected.add(giraffe);
+        expected.add(gepard);
         assertEquals(expected, actual);
     }
 }
