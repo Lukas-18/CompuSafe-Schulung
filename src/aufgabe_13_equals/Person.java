@@ -1,11 +1,18 @@
 package aufgabe_13_equals;
 
+import aufgabe_20_CSVParser__Annotations.CSVEntity;
+import aufgabe_20_CSVParser__Annotations.CSVField;
+
 import java.util.Objects;
 
+@CSVEntity
 public class Person implements Comparable<Person>{
     private int alter;
+    @CSVField
     private String vorname;
+    @CSVField
     private String nachname;
+    @CSVField
     private int groesseInCm;
     private int gewichtInKg;
 
