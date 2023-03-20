@@ -100,6 +100,7 @@ public class CSVParser {
                 }
             }
         } catch(Exception e) {
+            System.out.println(e);
             System.out.println("Could not access value");
         }
         return csvContent.toString();

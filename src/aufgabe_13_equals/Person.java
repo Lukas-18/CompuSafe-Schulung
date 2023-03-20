@@ -9,11 +9,11 @@ import java.util.Objects;
 public class Person implements Comparable<Person>{
     private int alter;
     @CSVField
-    private String vorname;
+    public String vorname;
     @CSVField
-    private String nachname;
+    public String nachname;
     @CSVField
-    private int groesseInCm;
+    public int groesseInCm;
     private int gewichtInKg;
 
     public Person(int alter, String vorname, String nachname, int groesseInCm, int gewichtInKg){
